@@ -34,13 +34,13 @@ class Recepies extends Component {
               .slice(27)
               .map((name) => {
                 return (
-                  <Col xm="3" className={classes.recipe_col}  key={name.recipe_id}>
+                  <Col  className={classes.recipe_col}  key={name.recipe_id}>
                     <img alt="Recipe Img" className={classes.recipe_img} src={name.image_url}/>
                     <div className={classes.recipe_info}>
-                    <h5>{name.publisher}</h5>
-                    <h4>{name
+                    <h6>{name.publisher}</h6>
+                    <h5>{name
                         .title
-                        .substring(0, 24)}</h4>
+                        .substring(0, 24)}</h5>
                         </div>
                   </Col>
 

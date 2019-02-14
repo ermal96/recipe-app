@@ -1,3 +1,25 @@
 body{
     font-family: 'Nunito', sans-serif;
+    margin:0;
+    padding:0;
+}
+
+.main-content{
+    background:rgb(231, 225, 225);
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.recipe-content{
+    height: calc(100vh - 80px) !important;
+    padding-top: 45px;  
+}
+
+
+
+@media (min-width: 1200px){
+    .container {
+        max-width: 1240px !important;
+    }
 }
