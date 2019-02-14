@@ -1,11 +1,10 @@
-import React, { Component, Fragment } from 'react';
-import Example from "./Components/Slide";
-
+import React, {Component, Fragment} from 'react';
+import Recipes from "./Components/Recipes/Recipes"
 class App extends Component {
   render() {
     return (
       <Fragment>
-        <Example />
+        <Recipes/>
       </Fragment>
     );
   }
