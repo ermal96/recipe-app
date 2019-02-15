@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Form, FormGroup, Input } from 'reactstrap';
 
 
 const Search = () => {
@@ -7,7 +7,7 @@ const Search = () => {
     <Fragment>
      <Form inline>
         <FormGroup>
-          <Input size="lg" type="text" name="email" id="exampleEmail" placeholder="Search" />
+          <Input size="lg" type="text" name="search" id="search" placeholder="Search" />
         </FormGroup>
     
       </Form>

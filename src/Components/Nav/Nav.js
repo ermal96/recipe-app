@@ -9,16 +9,15 @@ import {
 } from 'reactstrap';
 import classes from './Nav.module.css';
 
-const Navigation = () => {
+const Navigation = (props) => {
   return (
     <Fragment>
-      
         <Navbar className={classes.navigation}  dark expand="md">
         <Container>
           <NavbarBrand href="/">Recipe App</NavbarBrand>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Test</NavLink>
+              <NavLink>{props.name}</NavLink>
             </NavItem>
           </Nav>
           </Container>

@@ -1,6 +1,5 @@
 import React, {Component, Fragment} from 'react';
 import axios from "axios";
-import { Container, Row, Col } from 'reactstrap';
 import classes from './Recipes.module.css';
 class Recepies extends Component {
 
@@ -26,15 +25,13 @@ class Recepies extends Component {
   render() {
     return (
       <Fragment>
-        <Container >
-          <Row className={classes.recipe_row}>
             {this
               .state
               .recipe
               .slice(27)
               .map((name) => {
                 return (
-                  <Col  className={classes.recipe_col}  key={name.recipe_id}>
+                  <div  className={classes.recipe_col}  key={name.recipe_id}>
                     <img alt="Recipe Img" className={classes.recipe_img} src={name.image_url}/>
                     <div className={classes.recipe_info}>
                     <h6>{name.publisher}</h6>
@@ -42,15 +39,15 @@ class Recepies extends Component {
                         .title
                         .substring(0, 24)}</h5>
                         </div>
-                  </Col>
+                  </div>
 
                 )
               })
 }
 
-          </Row>
 
-          </Container>
+
+
       </Fragment>
     );
   }
