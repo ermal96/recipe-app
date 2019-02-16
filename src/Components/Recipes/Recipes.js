@@ -2,6 +2,8 @@ import React, {Component, Fragment} from 'react';
 import axios from "axios";
 import classes from './Recipes.module.css';
 import Search from '../Search/Search';
+import RecipeCard from './RecipeBox';
+import { Row, Col } from 'reactstrap';
 class Recepies extends Component {
 
   state = {
@@ -27,23 +29,27 @@ class Recepies extends Component {
   render() {
     return (
       <Fragment>
-        <Search getRecipe={this.getRecipe}/> {this
+        <div className={classes.search}>
+          <Search getRecipe={this.getRecipe}/>
+        </div>
+        {this
           .state
           .recipe
-          .slice(27)
+          .slice(22)
           .map((name) => {
             return (
-              <div className={classes.recipe_col} key={name.recipe_id}>
-                <img alt="Recipe Img" className={classes.recipe_img} src={name.image_url}/>
-                <div className={classes.recipe_info}>
-                  <p className={classes.title}>
-                    {this.cutString(name.title, 20)
-                    }
-                  </p>
+              <Fragment >
+                <Row>
+                  <Col xs="4">
+                    <RecipeCard
+                      id={name.recipe_id}
+                      author={name.publisher}
+                      recipeImg={name.image_url}
+                      recipeTitle={name.title}/>
 
-                </div>
-              </div>
-
+                  </Col>
+                </Row>
+              </Fragment>
             )
           })
 }

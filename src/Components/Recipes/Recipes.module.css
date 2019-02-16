@@ -4,7 +4,7 @@
     object-fit: cover;
     border-radius:200px;
 }
-.recipe_col{
+.recipe_col{    
     border: 2px solid #fff90070;
     background: #fff;
     height: 160px;
@@ -19,4 +19,9 @@
 
 .title{
     margin-bottom:0;
+}
+
+.search{
+    background: #ededed;
+    padding: 25px 0;
 }
