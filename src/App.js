@@ -1,7 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import Recipes from "./Components/Recipes/Recipes";
 import Navigation from "./Components/Nav/Nav";
-//import Search from './Components/Search/Search'
 import Slide from "./Components/Slide/Slide";
 import RecentRecipes from "./Components/Recipes/RecentRecipes";
 import {Container, Row, Col} from 'reactstrap';
@@ -14,18 +13,27 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <Navigation/>
-        <Slide/>
-        <div className="recipe-content">
-          <Container >
 
+        <div className="recipe-content">
+          <Navigation/>
+          <Container >
             <Row>
-            <Col xs="2">
-              <Recipes/>
+              <Col xs="3">
+                <Recipes/>
               </Col>
+
+              <Col xs="9">
              
-              <RecentRecipes />
-              
+                <div
+                  style={{
+                  marginTop: "20px",
+                  paddingTop: "15px",
+                  border: "1px solid #e0e0e0",
+                  borderRadius: "5px"
+                }}>
+                  <RecentRecipes/>
+                </div>
+              </Col>
             </Row>
           </Container>
         </div>

@@ -4,6 +4,10 @@ import App from './App';
 import  './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
+import { library } from '@fortawesome/fontawesome-svg-core'
+
+
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

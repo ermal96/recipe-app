@@ -1,4 +1,5 @@
-import React, {Fragment} from 'react';
+import React, { Fragment} from 'react';
+
 import { Form, FormGroup, Input} from 'reactstrap';
 
 const Search = (props) => {
@@ -6,8 +7,8 @@ const Search = (props) => {
     <Fragment>
 
       <Form inline onSubmit={props.getRecipe}>
-        <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-          <Input name="username" type="text" placeholder="Search for Recipe"/>
+        <FormGroup style={{width: "100%"}}>
+          <Input style={{width: "100%"}}  name="username" type="text" placeholder="Search for Recipe"/>
         </FormGroup>
       </Form>
        

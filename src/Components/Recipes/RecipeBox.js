@@ -6,8 +6,7 @@ const RecipeCard = (props) => {
     <div>
 
       <Card>
-        {props.key}
-        <CardImg top width="100%" src={props.recipeImg} alt="Card image cap"/>
+        <CardImg top width="100%" src={props.recipeImg} alt="Recipe Img"/>
         <CardBody>
           <CardTitle>{props.recipeTitle}</CardTitle>
           <CardText>
