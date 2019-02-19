@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import axios from "axios";
 import RecipeCard from './RecipeBox';
-import { API_KEY, baseUrl } from '../../Config';
+import { API_KEY} from '../../Config';
 import {Container, Row, Col, Spinner} from 'reactstrap';
 
 class Recepies extends Component {
@@ -13,7 +13,9 @@ class Recepies extends Component {
 
   componentDidMount() {
 
-    axios({url: `${baseUrl}key=${API_KEY}&q=pizza`, type: 'GET'}).then((res) => {
+    axios.get(`search?key=${API_KEY}&q=pizza`
+    )
+    .then((res) => {
       const recipe = res.data.recipes;
       this.setState({recipe, isLoaded: false})
       console.log(recipe);
@@ -35,7 +37,7 @@ class Recepies extends Component {
             {this
               .state
               .recipe
-              .slice(24)
+              .slice(0, 6)
               .map((name) => {
                 return (
                   <Col key={name.recipe_id} sm="4">

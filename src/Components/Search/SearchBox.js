@@ -1,17 +1,15 @@
 import React from 'react';
-import { Card, CardTitle, CardText, CardImg, CardImgOverlay } from 'reactstrap';
+import {Card, CardTitle,  CardImg, CardBody} from 'reactstrap';
 
 const SearchBox = (props) => {
   return (
     <div>
-      <Card inverse>
-        <CardImg width="100%" src={props.recipeImg} alt="Card image cap" />
-        <CardImgOverlay>
-                  <CardTitle>{props.recipeTitle}</CardTitle>
-          <CardText>
-            <small className="text-muted">{props.author}</small>
-          </CardText>
-        </CardImgOverlay>
+
+      <Card>
+        <CardImg style={{height: "80px"}} top width="100%" src={props.recipeImg} alt="Recipe Img"/>
+        <CardBody style={{padding: "13px 17px"}}>
+          <CardTitle style={{marginBottom: "0"}}>{props.recipeTitle}</CardTitle>
+        </CardBody>
       </Card>
     </div>
   );

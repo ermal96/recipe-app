@@ -4,8 +4,8 @@ import App from './App';
 import  './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
-import { library } from '@fortawesome/fontawesome-svg-core'
-
+import axios from 'axios';
+axios.defaults.baseURL = 'https://www.food2fork.com/api/';
 
 
 
