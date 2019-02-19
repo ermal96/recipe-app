@@ -2,7 +2,6 @@ import React, {Component, Fragment} from 'react';
 import axios from "axios";
 import classes from './Recipes.module.css';
 import Search from '../Search/Search';
-//import RecipeCard from './RecipeBox';
 import SearchBox from '../Search/SearchBox';
 import {API_KEY} from '../../Config';
 import {Row, Col} from 'reactstrap';

@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import Recipes from "./Components/Recipes/Recipes";
+import Recipes from "./Components/Recipes/SearchResults";
 import Navigation from "./Components/Nav/Nav";
 //import Slide from "./Components/Slide/Slide";
 import RecentRecipes from "./Components/Recipes/RecentRecipes";
