@@ -5,16 +5,20 @@ body{
     overflow: hidden;
     background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
     height: 100vh;
+}
+.logo{
+    height:28px;
+}
 
+.nav_icon{
+    height: 20px;
+    margin-right: 5px;  
 }
-.form-control {
-    border: none !important;
-    box-shadow: -10px 0px 28px #d2d2d2a1;
-}
+
 .recipe-content{
     width: 1240px;
     background: white;
-    height: 700px;
+    height: 600px;
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
@@ -23,20 +27,29 @@ body{
     overflow:hidden;
     box-shadow:  0px 7px 28px rgba(70, 70, 70, 0.30980392156862746)
 }
-.card-img-top {
-    height: 145px ;
-    object-fit: cover;
+.main_row{
+    margin-top:5px;
 }
-.card{
-    margin-bottom: 30px;
+
+.search_col{
+    padding-left:30px !important;
+}
+
+.recent_recipes_container{
+    margin-top:27px;
+}
+
+.recent_recipes{
+    margin-top:20px;
 }
 
 
-.card {
-    border: none !important;
-    border-radius: .25rem;
-    box-shadow: 0px 5px 10px #f1f1f1;
-}
+
+
+
+
+
+
 @media (min-width: 1200px){
     .container {
         max-width: 1240px !important;

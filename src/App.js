@@ -1,47 +1,32 @@
-import React, {Component, Fragment} from 'react';
-import Recipes from "./Components/Recipes/SearchResults";
+import React, {Component} from 'react';
+import SearchResults from "./Components/Search/SearchResults";
 import Navigation from "./Components/Nav/Nav";
-//import Slide from "./Components/Slide/Slide";
 import RecentRecipes from "./Components/Recipes/RecentRecipes";
 import {Container, Row, Col} from 'reactstrap';
 class App extends Component {
-
-  state = {
-    name: "Home"
-  }
-
   render() {
     return (
-      <Fragment>
-
         <div className="recipe-content">
           <Navigation/>
+
           <Container >
-            <Row style={{
-              marginTop: "5px"
-            }}>
-              <Col xs="3" style={{
-                paddingLeft: "30px"
-              }}>
-                <Recipes/>
+            <Row className="main_row">
+              <Col className="search_col" xs="3">
+                <SearchResults/>
               </Col>
 
-              <Col xs="9" style={{
-                marginTop: "27px"
-              }}>
-              <Container>
-               <p>Sort By</p>
-               </Container>
-                <div style={{
-                marginTop: "20px"
-              }}>
-                <RecentRecipes />
+              <Col className="recent_recipes_container" xs="9">
+                <Container>
+                  <p>Sort By</p>
+                </Container>
+                <div className="recent_recipes">
+                  <RecentRecipes/>
                 </div>
               </Col>
+
             </Row>
           </Container>
         </div>
-      </Fragment>
     );
   }
 }

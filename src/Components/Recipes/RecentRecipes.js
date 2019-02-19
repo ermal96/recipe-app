@@ -1,9 +1,8 @@
 import React, {Component, Fragment} from 'react';
 import axios from "axios";
-import RecipeCard from './RecipeBox';
+import RecipeCard from './RecentRecipesBox';
 import { API_KEY} from '../../Config';
 import {Container, Row, Col, Spinner} from 'reactstrap';
-
 class Recepies extends Component {
 
   state = {
@@ -37,14 +36,14 @@ class Recepies extends Component {
             {this
               .state
               .recipe
-              .slice(0, 6)
+              .slice(0, 8)
               .map((name) => {
                 return (
-                  <Col key={name.recipe_id} sm="4">
+                  <Col key={name.recipe_id} sm="3">
                     <RecipeCard
                       author={name.publisher}
                       recipeImg={name.image_url}
-                      recipeTitle={this.cutString(name.title, 27)}/>
+                      recipeTitle={this.cutString(name.title, 22)}/>
                   </Col>
                 )
               })
