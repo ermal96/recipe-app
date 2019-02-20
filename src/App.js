@@ -16,9 +16,6 @@ class App extends Component {
               </Col>
 
               <Col className="recent_recipes_container" xs="9">
-                <Container>
-                  <p>Sort By</p>
-                </Container>
                 <div className="recent_recipes">
                   <RecentRecipes/>
                 </div>

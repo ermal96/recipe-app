@@ -15,25 +15,25 @@ import Lunch from '../../Assets/lunch.svg';
 import Dinner from '../../Assets/dinner.svg';
 import Contact from '../../Assets/contact.svg';
 
-const Navigation = (props) => {
+const Navigation = () => {
   return (
     <Fragment>
       <Navbar className={classes.navigation} dark expand="md">
         <Container>
-          <NavbarBrand href="/"><img className="logo" alt=""log src={Logo} /> Recipe Finder</NavbarBrand>
+          <NavbarBrand href="/"><img className="logo" alt="logo" src={Logo} />Recipe Finder</NavbarBrand>
 
           <Nav className="ml-auto" navbar>
           <NavItem>
               <NavLink>
-              <img className="nav_icon" alt="Home" src={Home} /> Home</NavLink>
+              <img className="nav_icon" alt="Home" src={Home} />Home</NavLink>
             </NavItem>
             <NavItem>
               <NavLink>
-              <img className="nav_icon" alt="Breakfast" src={Breakfast} />  Breakfast</NavLink>
+              <img className="nav_icon" alt="Breakfast" src={Breakfast} />Breakfast</NavLink>
             </NavItem>
             <NavItem>
               <NavLink>
-              <img className="nav_icon" alt="Lunch" src={Lunch} />  Lunch</NavLink>
+              <img className="nav_icon" alt="Lunch" src={Lunch} />Lunch</NavLink>
             </NavItem>
             <NavItem>
               <NavLink>
