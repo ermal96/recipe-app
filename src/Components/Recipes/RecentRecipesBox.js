@@ -6,7 +6,7 @@ const RecipeCard = (props) => {
   return (
     <div>
 
-      <Card onClick={props.getFullRecipe} className={classes.card}>
+      <Card onClick={props.getRecipe} className={classes.card}>
         <CardImg className={classes.cardImg} top width="100%" src={props.recipeImg} alt="Recipe Img"/>
         <CardBody className={classes.cardBody}>
           <CardTitle>{props.recipeTitle}</CardTitle>
