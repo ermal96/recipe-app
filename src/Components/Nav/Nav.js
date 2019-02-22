@@ -18,7 +18,7 @@ import Contact from '../../Assets/contact.svg';
 const Navigation = () => {
   return (
     <Fragment>
-      <Navbar className={classes.navigation} dark expand="md">
+      <Navbar  className={classes.navigation} dark expand="md">
         <Container>
           <NavbarBrand href="/"><img className="logo" alt="logo" src={Logo} />Recipe Finder</NavbarBrand>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardTitle, CardText, CardImg, CardBody } from 'reactstrap';
+import { Card, CardTitle, CardText, CardImg, CardBody, Button } from 'reactstrap';
 import classes from './RecentRecipes.module.css';
 
 const RecipeCard = (props) => {
@@ -13,6 +13,7 @@ const RecipeCard = (props) => {
           <CardText>
             <small className="text-muted">{props.author}</small>
           </CardText>
+          <Button onClick={props.newRecipe} size="sm" outline color="secondary">See More</Button>
         </CardBody>
       </Card>
     </div>

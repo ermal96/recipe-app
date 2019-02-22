@@ -1,0 +1,17 @@
+.full_recipe{
+    display:grid;
+    grid-template-columns: 48% 50%;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+.full_img{
+    min-height: 450px;
+    object-fit: cover;
+    width:100%;
+}
+
+.ingredients{
+    padding: 25px 10px 25px 30px;
+}

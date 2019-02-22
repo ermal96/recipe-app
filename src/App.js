@@ -15,7 +15,7 @@ class App extends Component {
                 <SearchResults/>
               </Col>
 
-              <Col className="recent_recipes_container" xs="9">
+              <Col  xs="9">
                 <div className="recent_recipes">
                   <RecentRecipes/>
                 </div>
