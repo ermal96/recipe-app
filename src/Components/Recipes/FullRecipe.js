@@ -6,22 +6,15 @@ const FullRecipe = (props) => {
     <Fragment>
 
       <div className={classes.full_recipe}>
-
         <div>
           <img className={classes.full_img} src={props.recipeImgFull} alt="Recipe"/>
-          
         </div>
-
         <div className={classes.ingredients}>
           <h4>{props.recipeName}</h4>
-
           <ul>
             {props.ingredients}
-
           </ul>
-
         </div>
-
       </div>
     </Fragment>
   );

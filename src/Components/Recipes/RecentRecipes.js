@@ -49,7 +49,6 @@ class Recepies extends Component {
   }
 
   getRecipes = (id) => {
-
     axios
       .get(`get`, {
       params: {
@@ -86,7 +85,7 @@ class Recepies extends Component {
             ? <Spinner color="warning"/>
             : null}
           <Row>
-            <Container></Container>
+            
 
             <Modal isOpen={this.state.modal} toggle={this.toggle}>
             {this.state.isLoaded

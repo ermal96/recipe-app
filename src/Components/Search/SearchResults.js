@@ -3,12 +3,16 @@ import axios from "axios";
 import Search from './Search';
 import SearchBox from './SearchBox';
 import {API_KEY} from '../../Config';
-import {Row, Col, Spinner} from 'reactstrap';
+import { Row, Col, Spinner, Modal } from 'reactstrap';
+import FullRecipe from '../Recipes/FullRecipe';
 class SearchResults extends Component {
 
   state = {
     recipe: [],
-    isLoaded: false
+    isLoaded: false,
+    fullRecipe: false,
+    ingredients: [],
+    modal: false
   }
 
   getRecipe = (e) => {
@@ -26,14 +30,46 @@ class SearchResults extends Component {
   }
   cutString = (str, len) => str.substring(0, (str + ' ').lastIndexOf(' ', len));
 
+  getRecipes = (id) => {
+    axios
+      .get(`get`, {
+      params: {
+        key: `${API_KEY}`,
+        rId: id
+      }
+    })
+      .then((res) => {
+        const ingredients = res.data.recipe.ingredients;
+        const fullRecipe = res.data.recipe
+        this.setState({fullRecipe, ingredients, isLoaded: false})
+        console.log(fullRecipe);
+
+      })
+  }
+
+  toggle = () => {
+    this.setState(prevState => ({
+      modal: !prevState.modal
+    }));
+  }
+
+  
   render() {
     return (
       <Fragment>
-        <Search getRecipe={this.getRecipe} />
-        {this.state.isLoaded
-            ? <Spinner color="warning" />
-            : null}
+        <Search getRecipe={this.getRecipe}/> {this.state.isLoaded
+          ? <Spinner color="warning"/>
+          : null}
         <Row>
+        <Modal isOpen={this.state.modal} toggle={this.toggle}>
+            {this.state.isLoaded
+            ? <Spinner color="warning"/>
+            : null}
+                <FullRecipe
+                />
+         
+
+            </Modal>
           {this
             .state
             .recipe
@@ -42,7 +78,12 @@ class SearchResults extends Component {
               return (
                 <Fragment >
                   <Col sm="6">
-                    < SearchBox recipeImg={name.image_url} recipeTitle={this.cutString(name.title, 21)}/>
+                    <SearchBox
+                      newRecipe={() => this.toggle()}
+                      getRecipe={() => this.getRecipes(name.recipe_id)}
+                      recipeImg={name.image_url}
+                      recipeTitle={this.cutString(name.title, 21)}
+                    />
                   </Col>
                 </Fragment>
               )
